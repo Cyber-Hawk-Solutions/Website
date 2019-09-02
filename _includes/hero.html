@@ -1,0 +1,73 @@
+{% if page.layout == "home" %}
+<!-- {% for slide in page.slides %}
+      <img src="{{ slide.src }}">
+    {% endfor %} -->
+
+<!-- Slider
+		============================================= -->
+<section id="slider" class="slider-element bg-angle">
+  <!-- Slider Background Map
+			============================================= -->
+  <img
+    class="img-map parallax"
+    src="assets/hosting/images/svg/map-light.svg"
+    alt=""
+    data-0="opacity: 0.05;margin-top:0px"
+    data-800="opacity: 0.5;margin-top:150px"
+  />
+
+  <!-- Slider Background Cloud
+			============================================= -->
+  <div class="cloud-wrap">
+    <div class="c1"><div class="cloud"></div></div>
+    <div class="c2"><div class="cloud"></div></div>
+    <div class="c3"><div class="cloud"></div></div>
+    <div class="c4"><div class="cloud"></div></div>
+    <div class="c5"><div class="cloud"></div></div>
+  </div>
+
+  <!-- Slider Titiles
+			============================================= -->
+  <div class="vertical-middle ignore-header dark">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-5">
+          <div class="slider-title">
+            <h2
+              class="text-white text-rotater mb-3"
+              data-separator=","
+              data-rotate="fadeIn"
+              data-speed="3500"
+            >
+              Get your own<br />
+              <span class="t-rotate text-white">Awesome Website ,Beautiful Logo and Branding,Amazing App, Stunning Online Platform,  Creative Team</span>
+             
+            </h2>
+            <p>
+              Elevate your business functionality & reputation with a
+              custom-made website that is designed to plant the perfect first
+              impression. Take your business to the next level #TheCyberHawkWay
+            </p>
+          </div>
+          <a
+            href="http://cyberhawksolutions.com/pricing"
+            class="button bg-white text-dark button-light button-rounded button-large color ml-0"
+            >Make your order<i class="icon-line-arrow-right t600"></i
+          ></a>
+        </div>
+        <div class="col-md-5 d-none d-md-block">
+          <img src="assets/hosting/images/3.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #slider end -->
+
+{% else %}
+<!-- <div id="banner">
+  <div class="h-100 d-flex justify-content-center" data-bs-parallax-bg="true" style="background-image:url('{{ page.hero-img }}');background-position:center;background-size:cover;">
+    <h1 class="align-self-center text-center text-light"> {{ page.title }} </h1>
+  </div>
+</div> -->
+{% endif %}
