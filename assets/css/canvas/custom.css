@@ -160,3 +160,11 @@
 #portfolio_wrapper .tp-loader.spinner3{ background-color: #313437 !important; } 
 
 #portfolio .uranus.tparrows{width:50px; height:50px; background:rgba(255,255,255,0)}#portfolio .uranus.tparrows:before{width:50px; height:50px; line-height:50px; font-size:40px; transition:all 0.3s;-webkit-transition:all 0.3s}#portfolio .uranus.tparrows:hover:before{opacity:0.75}
+
+@media (max-width: 991.98px) {
+	#header.dark.transparent-header, #header.dark.semi-transparent {
+   
+	background: #FFF !important;
+	border-bottom: 1px solid #F5F5F5 !important;
+	}
+}
