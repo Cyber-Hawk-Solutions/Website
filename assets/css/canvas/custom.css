@@ -164,7 +164,6 @@
 @media (max-width: 991.98px) {
 	#header.dark.transparent-header, #header.dark.semi-transparent {
    
-	background: #FFF !important;
-	border-bottom: 1px solid #F5F5F5 !important;
+		background: #003543 !important;
 	}
 }
