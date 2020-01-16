@@ -30,7 +30,7 @@ const servicePeriods = {
 };
 
 let selectedServices = {};
-let dayRate = 80;
+let dayRate = 150;
 
 $(document).ready(function(){
 
@@ -82,7 +82,7 @@ $(document).ready(function(){
     }
   }
 
-  function toggleItemSelection(item){p
+  function toggleItemSelection(item){
     $(item).toggleClass("selected-success rounded");
 
     let serviceTitle = ($(item)[0].children[1].innerText).toLowerCase();
