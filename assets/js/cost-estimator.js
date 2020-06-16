@@ -170,7 +170,7 @@ $(document).ready(function(){
       jQuery.ajax ({
         url: "https://script.google.com/macros/s/AKfycbxOEEmrlSsrYjhfGYElESRzE4FkBVWU5WMOK9_M-3c7msoHHJMZ/exec",
         type: "POST",
-        data: estimate,
+        data: JSON.stringify(estimate),
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: function(res){
