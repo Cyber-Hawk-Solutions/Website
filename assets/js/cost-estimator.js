@@ -172,7 +172,7 @@ $(document).ready(function(){
         type: "POST",
         data: JSON.stringify(estimate),
         dataType: "json",
-        contentType: "application/json; charset=utf-8",
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",
         success: function(res){
        
           if (res.status = 200){
