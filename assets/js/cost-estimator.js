@@ -167,7 +167,7 @@ $(document).ready(function(){
     let estimate = getFullEstimate();
     estimate.email = email;
     if (estimate.services.length > 0){
-      $.post("https://script.google.com/macros/s/AKfycbxOEEmrlSsrYjhfGYElESRzE4FkBVWU5WMOK9_M-3c7msoHHJMZ/exec", estimate, function(res){
+      $.post("https://script.google.com/macros/s/AKfycbwRy_RJzB1HpIQTF3jm2LOqper72zjubCWE8_9JyA/exec", estimate, function(res){
         if (res.status = 200){
           showEmailSentMessage();
         }
