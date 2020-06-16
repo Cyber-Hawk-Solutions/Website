@@ -167,15 +167,22 @@ $(document).ready(function(){
     let estimate = getFullEstimate();
     estimate.email = email;
     if (estimate.services.length > 0){
-      $.post("https://script.google.com/macros/s/AKfycbxOEEmrlSsrYjhfGYElESRzE4FkBVWU5WMOK9_M-3c7msoHHJMZ/exec", estimate, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}}, function(res){
+      jQuery.ajax ({
+        url: "https://script.google.com/macros/s/AKfycbxOEEmrlSsrYjhfGYElESRzE4FkBVWU5WMOK9_M-3c7msoHHJMZ/exec",
+        type: "POST",
+        data: estimate,
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function(res){
+       
         if (res.status = 200){
           showEmailSentMessage();
         }
         else {
           showEmailFailedMessage();
         }
-      });
-    }
+      }
+    });
   }
 
 })();
