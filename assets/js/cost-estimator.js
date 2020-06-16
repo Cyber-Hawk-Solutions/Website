@@ -175,14 +175,15 @@ $(document).ready(function(){
         contentType: "application/json; charset=utf-8",
         success: function(res){
        
-        if (res.status = 200){
-          showEmailSentMessage();
+          if (res.status = 200){
+            showEmailSentMessage();
+          }
+          else {
+            showEmailFailedMessage();
+          }
         }
-        else {
-          showEmailFailedMessage();
-        }
-      }
-    });
+      });
+    }
   }
 
 })();
