@@ -1,12 +1,12 @@
 "use strict";
 const servicePeriods = {
-  'small': {title:'small', period: 10},
-  'medium': {title:'medium', period: 20},
-  'large': {title:'large', period: 30},
+  'small': {title:'small', period: 7},
+  'medium': {title:'medium', period: 14},
+  'large': {title:'large', period: 21},
   'email/ password sign up': {title:'email/ password sign up', period:2},
   'third party login': {title:'third party login', period:3},
   'user invitation emails': {title:'user invitation emails', period:3},
-  'multi-tenant accounts': {title:'multi-tenant accounts', period:7},
+  'multi-tenant accounts': {title:'multi-tenant accounts', period:5},
   'dashboard': {title:'dashboard', period:5},
   'activity feed': {title:'activity feed', period:4},
   'file uploading': {title:'file uploading', period:2},
