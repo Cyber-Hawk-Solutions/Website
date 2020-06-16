@@ -8,7 +8,7 @@
   <body class="stretched layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}"
   >
 
-    <div id="wrapper" class="clearfix">
+    <div id="wrapper" class="clearfix" style="position: fixed !important;" >
 
       {% include browser-upgrade.html %}
       
