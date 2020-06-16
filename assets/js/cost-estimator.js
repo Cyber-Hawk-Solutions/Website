@@ -65,22 +65,6 @@ $(document).ready(function(){
     }
   }
 
-  function sendEstimate(){
-    let email = getEstimateEmail();
-    let estimate = getFullEstimate();
-    estimate.email = email;
-    if (estimate.services.length > 0){
-      $.post("api/email/estimate", estimate, function(res){
-        if (res.isSent){
-          showEmailSentMessage();
-          $.post("api/estimate", estimate);
-        }
-        else {
-          showEmailFailedMessage();
-        }
-      });
-    }
-  }
 
   function toggleItemSelection(item){
     $(item).toggleClass("selected-success rounded");
@@ -176,6 +160,22 @@ $(document).ready(function(){
     $("#save-estimate").text("Estimate saved");
     $("#save-estimate").attr("userId", "")
     $("#save-estimate").attr("disabled", "")
+  }
+
+  function sendEstimate(){
+    let email = getEstimateEmail();
+    let estimate = getFullEstimate();
+    estimate.email = email;
+    if (estimate.services.length > 0){
+      $.post("https://script.google.com/macros/s/AKfycbxOEEmrlSsrYjhfGYElESRzE4FkBVWU5WMOK9_M-3c7msoHHJMZ/exec", estimate, function(res){
+        if (res.status = 200){
+          showEmailSentMessage();
+        }
+        else {
+          showEmailFailedMessage();
+        }
+      });
+    }
   }
 
 })();
