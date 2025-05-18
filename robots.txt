@@ -1,0 +1,16 @@
+---
+---
+# Allow all user agents
+User-agent: *
+
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /.jekyll-cache/
+Disallow: /.firebase/
+
+# Allow public assets
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://cyberhawksolutions.com/sitemap.xml
