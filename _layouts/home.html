@@ -14,27 +14,26 @@ layout: default
         <div class="slider-bottom-box">
           <div class="row align-items-center clearfix">
             <div class="col-lg-4 mb-3 mb-lg-0">
-              <h2 class="mb-3 h1 t300">What we do?</h2>
-              <p class="t400 text-muted mb-0">Enthusiastically provide software and digital services</p>
+              <h2 class="mb-3 h1 t300">What we do.</h2>
+              <p class="t400 text-muted mb-0">Custom software and digital systems, built to last.</p>
             </div>
             <div class="col-lg-4 col-sm-6">
               <ul class="iconlist m-0">
-                <li><img src="assets/hosting/images/svg/checked.svg" width="20" height="20" alt="" class="mr-2">Web and
-                  App Development</li>
-                <li class="pt-3"><img src="assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
-                    class="mr-2">Graphic and Brand Design</li>
-                <li class="pt-3"><img src="assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
-                    class="mr-2">Consulting</li>
+                <li><img src="/assets/hosting/images/svg/checked.svg" width="20" height="20" alt="" class="mr-2">Custom Information Systems</li>
+                <li class="pt-3"><img src="/assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
+                    class="mr-2">Websites &amp; Web Platforms</li>
+                <li class="pt-3"><img src="/assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
+                    class="mr-2">Mobile Apps</li>
               </ul>
             </div>
             <div class="col-lg-4 col-sm-6">
               <ul class="iconlist m-0">
-                <li class="pt-3 pt-lg-0"><img src="assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
-                    class="mr-2">Cyber Security</li>
-                <li class="pt-3"><img src="assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
-                    class="mr-2">Network Engineerig</li>
-                <li class="pt-3"><img src="assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
-                    class="mr-2">Marketing Management</li>
+                <li class="pt-3 pt-lg-0"><img src="/assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
+                    class="mr-2">Automations &amp; AI Integrations</li>
+                <li class="pt-3"><img src="/assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
+                    class="mr-2">Digital Product Management</li>
+                <li class="pt-3"><img src="/assets/hosting/images/svg/checked.svg" width="20" height="20" alt=""
+                    class="mr-2">Consulting &amp; Presentations</li>
               </ul>
             </div>
           </div>
@@ -42,11 +41,15 @@ layout: default
       </div>
     </div>
 
-    {% include services.html %}
-
   </div>
 
-  <div class="section bg-angle" style="background: #F5F5F5 url('assets/hosting/images/pattern-dark.png') repeat center center;">
+  <div id="services-section">
+    <div class="container">
+      {% include services.html %}
+    </div>
+  </div>
+
+  <div class="section bg-angle" style="background: #F5F5F5 url('/assets/hosting/images/pattern-dark.png') repeat center center;">
     <div class="container">
       {% include portfolio.html %}
     </div>
@@ -105,25 +108,25 @@ layout: default
           <div class="row">
             <div class="col-6">
               <ul class="iconlist ml-0">
-                <li><img src="assets/hosting/images/flags/uk.png" alt=""><a
+                <li><img src="/assets/hosting/images/flags/uk.png" alt=""><a
                     href="http://cyberhawksolutions.com/pricing">United Kingdom</a></li>
-                <li><img src="assets/hosting/images/flags/us.png" alt=""><a
+                <li><img src="/assets/hosting/images/flags/us.png" alt=""><a
                     href="http://cyberhawksolutions.com/pricing">USA</a></li>
-                <li><img src="assets/hosting/images/flags/ag.png" alt=""><a
+                <li><img src="/assets/hosting/images/flags/ag.png" alt=""><a
                     href="http://cyberhawksolutions.com/pricing">Antigua & Barbuda</a></li>
-                <li><img src="assets/hosting/images/flags/sa.png" alt=""><a
+                <li><img src="/assets/hosting/images/flags/sa.png" alt=""><a
                     href="http://cyberhawksolutions.com/pricing">South Africa</a></li>
               </ul>
             </div>
             <div class="col-6">
               <ul class="iconlist ml-0">
-                <li><img src="assets/hosting/images/flags/si.png" alt=""><a
+                <li><img src="/assets/hosting/images/flags/si.png" alt=""><a
                     href="http://cyberhawksolutions.com/pricing">Singapore</a></li>
-                <li><img src="assets/hosting/images/flags/ja.png" alt=""><a
+                <li><img src="/assets/hosting/images/flags/ja.png" alt=""><a
                     href="http://cyberhawksolutions.com/pricing">Japan</a></li>
-                <li><img src="assets/hosting/images/flags/ca.png" alt=""><a
+                <li><img src="/assets/hosting/images/flags/ca.png" alt=""><a
                     href="http://cyberhawksolutions.com/pricing">Canada</a></li>
-                <li><img src="assets/hosting/images/flags/in.png" alt=""><a
+                <li><img src="/assets/hosting/images/flags/in.png" alt=""><a
                     href="http://cyberhawksolutions.com/pricing">India</a></li>
 
               </ul>
@@ -132,7 +135,7 @@ layout: default
         </div>
         <div class="col-lg-7 col-md-6">
           <div id="hotspot-img" class="hotspot-img mt-2 responsive-hotspot-wrap">
-            <img src="assets/hosting/images/svg/map.png" class="img-responsive" alt="">
+            <img src="/assets/hosting/images/svg/map.png" class="img-responsive" alt="">
 
             <!-- Circle #1 -->
             <div class="hot-spot" x="1970" y="830">
@@ -385,106 +388,26 @@ layout: default
 
   {% endcomment %}
 
-  <!-- Addition Service Section
+  <!-- CTA Section
   ============================================= -->
-  <div class="section nomargin"
-    style="background: #F9F9F9 url('assets/hosting/images/pattern-dark.png') repeat center center; padding: 80px 0">
+  <div class="section nomargin" style="background: linear-gradient(135deg, #0d1220 0%, #1a2540 100%); padding: 80px 0">
     <div class="container clearfix">
-      <div class="row clearfix">
-        <div class="col-md-12">
-          <div class="before-heading">Other Additional Services</div>
-          <h3>Highly Available Services</h3>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="feature-box p-4 media-box bg-white"
-                style="border-radius: 6px; box-shadow: 0 2px 4px rgba(3,27,78,.1); border: 1px solid #e5e8ed;">
-                <div class="fbox-media">
-                  <img src="assets/hosting/images/svg/balancing.svg" style="width: 42px;" alt="">
-                </div>
-                <div class="fbox-desc">
-                  <h3 class="ls0">Consulting</h3>
-                  <p class="mt-2">
-                    Want to know how to make your ideas a reality? Get professional advice backed by experienced
-                    innovators.
-
-                  </p>
-                </div>
-                <a href="http://cyberhawksolutions.com/pricing" class="btn btn-link mt-3 t400 color p-0"
-                  style="font-size: 16px;">FREE <i class="icon-line-arrow-right position-relative"
-                    style="top: 2px"></i></a>
-              </div>
-
-              <div class="feature-box p-4 topmargin-sm media-box bg-white"
-                style="border-radius: 6px; box-shadow: 0 2px 4px rgba(3,27,78,.1); border: 1px solid #e5e8ed;">
-                <div class="fbox-media">
-                  <img src="assets/hosting/images/svg/location.svg" style="width: 42px;" alt="">
-                </div>
-                <div class="fbox-desc">
-                  <h3 class="ls0">Project Management & Execution</h3>
-                  <p class="mt-2">Talk to us and lets get your project started or back on track. We love nicely asking
-                    developers about their progress.</p>
-                </div>
-                <a href="http://cyberhawksolutions.com/pricing" class="btn btn-link mt-3 t400 color p-0"
-                  style="font-size: 16px;">$50/month per project <i class="icon-line-arrow-right position-relative"
-                    style="top: 2px"></i></a>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="feature-box p-4 mt-4 mt-sm-0 media-box bg-white"
-                style="border-radius: 6px; box-shadow: 0 2px 4px rgba(3,27,78,.1); border: 1px solid #e5e8ed;">
-                <div class="fbox-media">
-                  <img src="assets/hosting/images/svg/ssl.svg" style="width: 42px;" alt="">
-                </div>
-                <div class="fbox-desc">
-                  <h3 class="ls0">Content Writing</h3>
-                  <p class="mt-2">Assertively harness stand-alone communities through front-end networks. Globally
-                    engage
-                    plug-and-play sources through multidisciplinary portals. Enthusiastically synergize orthogonal.</p>
-                </div>
-                <a href="http://cyberhawksolutions.com/pricing" class="btn btn-link mt-3 t400 color p-0"
-                  style="font-size: 16px;">$20 per 1000 words <i class="icon-line-arrow-right position-relative"
-                    style="top: 2px"></i></a>
-              </div>
-
-              <div class="feature-box p-4 topmargin-sm media-box bg-white"
-                style="border-radius: 6px; box-shadow: 0 2px 4px rgba(3,27,78,.1); border: 1px solid #e5e8ed;">
-                <div class="fbox-media">
-                  <img src="assets/hosting/images/svg/team.svg" style="width: 42px;" alt="">
-                </div>
-                <div class="fbox-desc">
-                  <h3 class="ls0">Team Acquisition</h3>
-                  <p class="mt-2">Uniquely harness prospective information through long-term high-impact portals.
-                    Rapidiously enable principle-centered users rather than inexpensive sources. Distinctively enhance
-                    front-end outsourcing.</p>
-                </div>
-                <a href="http://cyberhawksolutions.com/contact" class="btn btn-link mt-3 t400 color p-0"
-                  style="font-size: 16px;">Contact Us <i class="icon-line-arrow-right position-relative"
-                    style="top: 2px"></i></a>
-              </div>
-            </div>
-          </div>
+      <div class="row align-items-center">
+        <div class="col-md-7 mb-4 mb-md-0">
+          <span class="eyebrow" style="color: rgba(255,255,255,0.55);">Ready to build?</span>
+          <h3 class="ls0 nott mb-2 text-white" style="font-size: 26px; font-weight: 700;">Tell us what you need. We'll take it from there.</h3>
+          <p style="color: rgba(255,255,255,0.65); margin-bottom: 0; font-size: 15px; line-height: 1.7;">Submit a project request through our portal, or book a free discovery call with our team. No commitment — just a conversation.</p>
+        </div>
+        <div class="col-md-5 mt-4 mt-md-0 text-md-right">
+          <a href="https://portal.cyberhawksolutions.com/project-request/new" target="_blank"
+            class="button bg-white color button-rounded button-large ml-0 mb-3 d-block">Submit a Project Request</a>
+          <a href="https://calendly.com/cyberhawksolutions/projects" target="_blank"
+            class="button button-border border-white text-white button-rounded button-large ml-0 d-block">Book a Project Call</a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="clear"></div>
-  <div class="section bg-white m-0">
-    <div class="container">
-      <div class="row center justify-content-center">
-
-        <!-- Logo
-      ============================================= -->
-        <div id="logo">
-          <a href="#" class="standard-logo" data-dark-logo="assets/images/logo-full.png"><img src="assets/images/logo-full.png"
-              alt="CyberHawk Logo"></a>
-          <a href="#" class="retina-logo" data-dark-logo="assets/images/logo-full.png"><img src="assets/images/logo-full.png"
-              alt="CyberHawk Logo"></a>
-        </div><!-- #logo end -->
-      </div>
-    </div>
-  </div>
 
   <!-- Testimonials Section
   ============================================= -->
@@ -506,7 +429,7 @@ layout: default
         <div class="oc-item">
           <div class="testimonial p-4 noborder noshadow">
             <div class="testi-image">
-              <a href="http://cyberhawksolutions.com/pricing"><img src="assets/hosting/images/users/1.jpg"
+              <a href="http://cyberhawksolutions.com/pricing"><img src="/assets/hosting/images/users/1.jpg"
                   alt="Customer Testimonails"></a>
             </div>
             <ul class="list-unstyled ml-0 mt-4 mb-2">
@@ -530,7 +453,7 @@ layout: default
         <div class="oc-item">
           <div class="testimonial p-4 noborder noshadow">
             <div class="testi-image">
-              <a href="http://cyberhawksolutions.com/pricing"><img src="assets/hosting/images/users/2.jpg"
+              <a href="http://cyberhawksolutions.com/pricing"><img src="/assets/hosting/images/users/2.jpg"
                   alt="Customer Testimonails"></a>
             </div>
             <ul class="list-unstyled ml-0 mt-4 mb-2">
@@ -554,7 +477,7 @@ layout: default
         <div class="oc-item">
           <div class="testimonial p-4 noborder noshadow">
             <div class="testi-image">
-              <a href="http://cyberhawksolutions.com/pricing"><img src="assets/hosting/images/users/5.jpg"
+              <a href="http://cyberhawksolutions.com/pricing"><img src="/assets/hosting/images/users/5.jpg"
                   alt="Customer Testimonails"></a>
             </div>
             <ul class="list-unstyled ml-0 mt-4 mb-2">
@@ -577,7 +500,7 @@ layout: default
         <div class="oc-item">
           <div class="testimonial p-4 noborder noshadow">
             <div class="testi-image">
-              <a href="http://cyberhawksolutions.com/pricing"><img src="assets/hosting/images/users/4.jpg"
+              <a href="http://cyberhawksolutions.com/pricing"><img src="/assets/hosting/images/users/4.jpg"
                   alt="Customer Testimonails"></a>
             </div>
             <ul class="list-unstyled ml-0 mt-4 mb-2">
@@ -600,7 +523,7 @@ layout: default
         <div class="oc-item">
           <div class="testimonial p-4 noborder noshadow">
             <div class="testi-image">
-              <a href="http://cyberhawksolutions.com/pricing"><img src="assets/hosting/images/users/3.jpg"
+              <a href="http://cyberhawksolutions.com/pricing"><img src="/assets/hosting/images/users/3.jpg"
                   alt="Customer Testimonails"></a>
             </div>
             <ul class="list-unstyled ml-0 mt-4 mb-2">
@@ -635,26 +558,35 @@ layout: default
           <p>The companies that we work with to bring amazing software into production</p>
         </div>
         <!-- Clients Images -->
-        <div class="row clearfix">
-         
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/edgilelogo.png" alt="" class="clients"></a></div>
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/entrepeneloper.png" alt="" class="clients mt-5 mt-sm-0"></a></div>
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/majesticheights.png" alt="" class="clients mt-5 mt-sm-0"></a></div>
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/mindamaze.png" alt="" class="clients mt-5"></a></div>
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/nadislogo.png" alt="" class="clients mt-5"></a></div>
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/OG.png" alt="" class="clients mt-5"></a></div>
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/pjaguar.png" alt="" class="clients mt-5"></a></div>
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/sowiso.png" alt="" class="clients mt-5"></a></div>
-          <div class="col-sm-3 col-6 center"><a href="http://cyberhawksolutions.com/pricing"><img
-                src="assets/partners/schquizlogo.png" alt="" class="clients mt-5"></a></div>
+        <div class="row justify-content-center align-items-center text-center">
+
+          {% assign logo_items = "antiguan-government|Government of Antigua &amp; Barbuda,national-aerospace-tech|National AerospaceTech,national-housing-development|National Housing Development,glowup-festival|Glow Up Festival" | split: "," %}
+
+          {% for item in logo_items %}
+            {% assign parts = item | split: "|" %}
+            <div class="col-6 col-sm-4 col-md-3 mb-4">
+              <div class="d-flex align-items-center justify-content-center" style="gap:10px;min-height:56px;">
+                <img src="/assets/partners/{{ parts[0] }}.png" alt="{{ parts[1] }}" style="height:44px;width:auto;flex-shrink:0;">
+                <span style="font-size:13px;font-weight:600;color:#4a5560;text-align:left;line-height:1.35;">{{ parts[1] }}</span>
+              </div>
+            </div>
+          {% endfor %}
+
+          <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex align-items-center justify-content-center" style="min-height:56px;">
+            <div style="background:#0d1220;border-radius:8px;padding:8px 16px;display:inline-flex;align-items:center;">
+              <img src="/assets/partners/cdb-legal.png" alt="CDB Legal Services" style="height:36px;width:auto;">
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex align-items-center justify-content-center" style="min-height:56px;">
+            <img src="/assets/partners/guildmates.png" alt="Guildmates" class="clients">
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex align-items-center justify-content-center" style="min-height:56px;">
+            <img src="/assets/partners/analytical-services.png" alt="Department of Analytical Services" class="clients">
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex align-items-center justify-content-center" style="min-height:56px;">
+            <img src="/assets/partners/verb-consulting-mira-hr.png" alt="Verb Consulting / Mira HR" class="clients">
+          </div>
+
         </div>
       </div>
     </div>
@@ -666,11 +598,13 @@ layout: default
     <div class="container">
       <div class="row center justify-content-center">
         <div class="col-md-8">
-          <h2 class="t700 text-white mb-3">Get Better Business Now. order your website and schedule a meeting.</h2>
+          <h2 class="t700 text-white mb-3">Built to the highest industry standards. Delivered through our love of innovation.</h2>
         </div>
         <div class="col-md-8">
-          <a href="http://cyberhawksolutions.com/pricing"
-            class="button center bg-white color button-light button-rounded button-large ml-0">Order your website</a>
+          <a href="https://portal.cyberhawksolutions.com/project-request/new" target="_blank"
+            class="button center bg-white color button-light button-rounded button-large ml-0 mr-3 mb-3 d-block d-sm-inline-block">Submit a Project Request</a>
+          <a href="https://calendly.com/cyberhawksolutions/projects" target="_blank"
+            class="button center button-border border-white text-white button-rounded button-large ml-0 mb-3 d-block d-sm-inline-block">Book a Call</a>
         </div>
       </div>
     </div>

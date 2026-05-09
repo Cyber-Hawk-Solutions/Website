@@ -1,0 +1,34 @@
+---
+layout: single-page
+title: Blog
+subtitle: Insights on software, systems, and building in the Caribbean
+---
+
+<div class="heading-block center topmargin-lg divcenter nobottomborder clearfix" style="max-width: 700px">
+  <h2>Insights &amp; Updates</h2>
+  <p>Thoughts on software development, information systems, and building technology products for the Caribbean and beyond.</p>
+</div>
+
+<div class="clear"></div>
+
+<div class="row mt-5">
+  {% for post in site.posts %}
+  <div class="col-lg-4 col-md-6 mb-5">
+    <div class="card h-100" style="border-radius: 8px; box-shadow: 0 2px 12px rgba(3,27,78,.07); border: 1px solid #e5e8ed;">
+      <div class="card-body p-4">
+        <small class="text-muted d-block mb-2" style="font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">
+          {{ post.date | date: "%B %-d, %Y" }}
+          {% if post.category %} &middot; {{ post.category }}{% endif %}
+        </small>
+        <h4 class="t600 mb-2" style="font-size: 18px; line-height: 1.4;">
+          <a href="{{ post.url }}" class="text-dark">{{ post.title }}</a>
+        </h4>
+        <p class="t300" style="font-size: 14px; color: #4a5560;">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+      </div>
+      <div class="card-footer bg-white p-4" style="border-top: 1px solid #e5e8ed;">
+        <a href="{{ post.url }}" class="btn btn-link color p-0" style="font-size: 14px;">Read More &#8250;</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

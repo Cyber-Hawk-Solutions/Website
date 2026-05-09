@@ -11,119 +11,107 @@
 
 
 
-/* img-hover-wraps */
+/* ── PORTFOLIO CARDS (rectangle aspect-ratio) ───────────────────────── */
+
 .img-hover-wrap {
-	-webkit-transition: transform .3s ease;
-	-o-transition: transform .3s ease;
 	transition: transform .3s ease;
-	-moz-transform-style: flat !important;
 	-webkit-backface-visibility: hidden;
 }
 
 .img-hover-wrap:hover {
-	-webkit-transform: scale(1.06);
-	-ms-transform: scale(1.06);
-	-o-transform: scale(1.06);
-	transform: scale(1.06);
+	transform: translateY(-4px);
 	z-index: 2;
 }
 
-.img-hover-card > a:after {
-	content: " ";
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	background: linear-gradient(0deg, rgba(0,17,36,0.2987570028011205) 0%, rgba(255,255,255,0) 55%);
-	z-index: 0;
-	-webkit-transition: background-color .3s ease;
-	-o-transition: background-color .3s ease;
-	transition: background-color .3s ease;
-}
-
-.img-hover-wrap:hover .img-hover-card > a:after { background-color: rgba(0, 0, 0, 0.6); }
-
+/* Fixed 16:9 rectangle with overflow crop */
 .img-hover-card {
 	position: relative;
 	display: block;
-	will-change: transform;
-	transition: all .3s ease;
-	box-shadow: 0 10px 40px transparent;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 20px rgba(15, 40, 80, 0.10);
+	transition: box-shadow .3s ease;
+	aspect-ratio: 16 / 9;
 }
 
-.img-hover-card a {
-	width: 100%;
-	max-width: 100%;
+.img-hover-wrap:hover .img-hover-card {
+	box-shadow: 0 12px 40px rgba(15, 40, 80, 0.20);
+}
+
+/* Image fills the rectangle */
+.img-hover-card > a {
 	display: block;
-	z-index: 99;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-.img-hover-card.hover-in {
-	transition: -webkit-transform .2s ease-out;
-	transition: transform .2s ease-out;
-	transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+.img-hover-card > a img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	display: block;
 }
 
-.img-hover-card.hover-3d { z-index: 2; }
-
-.img-hover-card.hover-out {
-	transition: -webkit-transform .2s ease-in;
-	transition: transform .2s ease-in;
-	transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+/* Dark overlay — always visible, stronger on hover */
+.img-hover-card > a:after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(0deg, rgba(0,17,36,0.72) 0%, rgba(0,17,36,0.30) 55%, rgba(0,17,36,0.05) 100%);
+	opacity: 0.9;
+	transition: opacity .3s ease;
+	z-index: 1;
 }
 
-.img-hover-wrap:hover .img-hover-card { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
+.img-hover-wrap:hover .img-hover-card > a:after {
+	opacity: 1;
+}
 
+/* Text overlay — always legible */
 .img-hover-wrap .img-hover-detail {
 	position: absolute;
-	top: auto;
-	left: 40px;
-	bottom: 40px;
+	left: 22px;
+	bottom: 20px;
+	right: 22px;
 	pointer-events: none;
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: scale(1) translateY(40px) translateZ(50px);
-	-ms-transform: scale(1) translateY(30px) translateZ(50px);
-	-o-transform: scale(1) translateY(30px) translateZ(50px);
-	transform: scale(1) translateY(30px) translateZ(50px);
-	-webkit-transition: transform .2s ease;
-	-o-transition: transform .2s ease;
-	transition: transform .2s ease;
+	z-index: 2;
+	transform: translateY(3px);
+	transition: transform .25s ease, opacity .25s ease;
+	opacity: 1;
 }
 
 .img-hover-wrap:hover .img-hover-detail {
+	transform: translateY(0);
 	opacity: 1;
-	-webkit-transform: scale(1.06) translateY(-5px) translateZ(50px);
-	-ms-transform: scale(1.06) translateY(-5px) translateZ(50px);
-	-o-transform: scale(1.06) translateY(-5px) translateZ(50px);
-	transform: scale(1.06) translateY(-5px) translateZ(50px);
 }
 
 .img-hover-wrap .img-hover-title {
-	margin: 0 0 6px 0;
-	font-size: 17px;
-	font-weight: 600;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-	z-index: 9;
+	margin: 2px 0 6px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 .img-hover-wrap .img-link {
 	opacity: 0;
-	width: 20px;
-	height: 20px;
-	border: 1px solid #FFF;
+	width: 22px;
+	height: 22px;
+	border: 1px solid rgba(255,255,255,0.8);
 	border-radius: 50%;
 	text-align: center;
-	line-height: 18px;
+	line-height: 20px;
 	font-size: 11px;
-	-webkit-transition: opacity .3s ease;
-	-o-transition: opacity .3s ease;
 	transition: opacity .3s ease;
 }
 
 .img-hover-wrap:hover .img-link { opacity: 1; }
 
-.img-hover-detail a { color: #FFF; }
+.img-hover-detail a { color: #fff; }
 
 
 .demos-filter {
@@ -165,8 +153,7 @@
 
 @media (max-width: 991.98px) {
 	#header.dark.transparent-header, #header.dark.semi-transparent {
-   
-		background: #003543 !important;
+		background: #0d1220 !important;
 	}
 }
 
@@ -246,8 +233,204 @@ section#page-title:after {
 }
 
 
-.page-title-muted { 
+.page-title-muted {
     color: #cfdeec !important;
+}
+
+/* ── DESIGN SYSTEM ──────────────────────────────────────────────────────── */
+
+/* Override Canvas theme hardcoded teal (#018ca7) with brand blue (#0F9DDA).
+   style.css and hosting.css hardcode #018ca7 — these rules take priority. */
+
+/* Hero / slider background */
+.slider-element {
+	background-color: #0F9DDA !important;
+}
+.slider-element.bg-angle::after {
+	background: #0a7eb3 !important;
+}
+
+/* .bgcolor sections (e.g., bottom CTA block) */
+.bgcolor:not(.button):not(a) {
+	background-color: #0F9DDA !important;
+	background-image: linear-gradient(135deg, #0F9DDA 0%, #0a7eb3 100%) !important;
+}
+
+/* Canvas .color class (links, icon accents, stars) → brand blue */
+.color:not(.button):not(.btn-link) {
+	color: #0F9DDA !important;
+}
+
+:root {
+    --ch-blue:      #0F9DDA;
+    --ch-blue-dark: #0a7eb3;
+    --ch-navy:      #0d1220;
+    --ch-surface:   #f5f9fd;
+    --ch-border:    #e3edf6;
+    --ch-body:      #4a5560;
+    --ch-muted:     #8a96a3;
+}
+
+/* ── BUTTONS ──────────────────────────────────────────────────────────── */
+
+/* Base modern treatment for all .button elements */
+.button {
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    text-shadow: none !important;
+    transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+/* Primary filled: .button.bgcolor or .button with ch-blue inline style */
+.button.bgcolor,
+a.button[style*="#0F9DDA"],
+a.button[style*="#0a7eb3"] {
+    background: var(--ch-blue) !important;
+    background-image: linear-gradient(135deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%) !important;
+    border-color: var(--ch-blue) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 16px rgba(15, 157, 218, 0.30) !important;
+}
+
+.button.bgcolor:hover,
+a.button[style*="#0F9DDA"]:hover {
+    box-shadow: 0 8px 24px rgba(15, 157, 218, 0.45) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Outline / border variant — default (on light backgrounds): blue border */
+.button.button-border {
+    border-width: 2px !important;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease !important;
+}
+
+/* Outline blue (secondary on light/white backgrounds) */
+.button.button-border:not([class*="border-white"]):not([style*="border-color"]) {
+    border-color: var(--ch-blue) !important;
+    color: var(--ch-blue) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.button.button-border:not([class*="border-white"]):not([style*="border-color"]):hover {
+    background: rgba(15, 157, 218, 0.07) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Outline white (secondary on dark/blue backgrounds) */
+.button.button-border.border-white {
+    border-color: rgba(255, 255, 255, 0.55) !important;
+    color: #ffffff !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.button.button-border.border-white:hover {
+    background: rgba(255, 255, 255, 0.10) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* White button on dark sections */
+.button.bg-white {
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+    color: var(--ch-blue) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+.button.bg-white:hover {
+    background: var(--ch-surface) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ── EYEBROW LABEL ─────────────────────────────────────────────────────── */
+
+.eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ch-blue);
+    margin-bottom: 6px;
+}
+
+/* ── ACCENT CARD (border-left stripe) ─────────────────────────────────── */
+
+.ch-card {
+    background: #ffffff;
+    border-radius: 10px;
+    border-left: 3px solid var(--ch-blue);
+    box-shadow: 0 2px 8px rgba(15, 40, 80, 0.04);
+    padding: 16px 18px;
+}
+
+/* ── STEP NUMBER CIRCLE ────────────────────────────────────────────────── */
+
+.ch-step {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    background: var(--ch-blue);
+    background-image: linear-gradient(135deg, var(--ch-blue) 0%, var(--ch-blue-dark) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+/* Dark secondary button (non-section context) */
+.button.bg-dark {
+    background-color: #1a2540 !important;
+    border-color: #1a2540 !important;
+    color: #ffffff !important;
+}
+
+.button.bg-dark:hover {
+    background-color: #0d1220 !important;
+    border-color: #0d1220 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Brand accent color for inline links and btn-link */
+a.color:not(.button),
+.btn-link.color {
+    color: var(--ch-blue) !important;
+}
+
+a.color:not(.button):hover,
+.btn-link.color:hover {
+    color: var(--ch-blue-dark) !important;
+}
+
+/* Tighten desktop nav item padding to fit 5 items + CTA button */
+@media (min-width: 992px) {
+    #primary-menu ul li > a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* ── ACTIVE NAV ITEM ─────────────────────────────────────────────────────────
+   Transparent header (over hero / dark page header): white + underline accent
+   Sticky header (scrolled, dark nav): brand blue text */
+#header:not(.sticky-header) #primary-menu ul li.current > a div {
+    color: #ffffff !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+    padding-bottom: 2px;
+}
+
+#header.sticky-header #primary-menu ul li.current > a div,
+#header.not-dark #primary-menu ul li.current > a div {
+    color: var(--ch-blue) !important;
 }
 
 #logo {
@@ -255,6 +438,15 @@ section#page-title:after {
 	align-content: center;
 	align-items: center;
 	margin-left: 20px !important;
+}
+
+/* ── HERO SECTION SPACING ────────────────────────────────────────────────────
+   Padding on #slider increases total section height so Canvas's top:50%
+   vertical centering lands below the transparent header. */
+#slider.slider-element {
+    padding-top: 200px !important;
+    padding-bottom: 80px !important;
+    box-sizing: border-box;
 }
 
 @media (max-width: 991px) {
@@ -266,6 +458,19 @@ section#page-title:after {
 
 	}
 
+    /* Hide nav CTA on mobile — hamburger covers navigation */
+    #primary-menu > a.button {
+        display: none !important;
+    }
+
+    /* Mobile hero: override Canvas's top+margin-top absolutely so content
+       clears the header (≈146px) with ~70px breathing room.
+       top:10% of 700px section = 70px → vmTop ≈ 216px.
+       Canvas sets margin-top via JS inline style; !important beats inline styles. */
+    #slider .vertical-middle {
+        top: 10% !important;
+        margin-top: 0 !important;
+    }
 }
 
 @media (max-width: 374px) {
@@ -276,6 +481,174 @@ section#page-title:after {
 	#logo {
 		margin-left: 20px !important;
 	}
+}
 
+/* ── GLOBAL TEXT-MUTED OVERRIDE ─────────────────────────────────────────── */
 
+/* Bootstrap's .text-muted is rgba(0,0,0,0.5) — too light for body content.
+   Override globally to use the design system body colour. */
+.text-muted {
+    color: var(--ch-body) !important;
+}
+
+/* Only truly secondary/small metadata can be lighter */
+small.text-muted,
+.card small.text-muted,
+.testi-meta span {
+    color: var(--ch-muted) !important;
+}
+
+/* ── SERVICES GAP FIX ────────────────────────────────────────────────────── */
+
+/* The content-wrap between hero and services shows white bg.
+   Match it to the services surface so there's no jarring gap. */
+.content-wrap.nopadding {
+    background-color: var(--ch-surface);
+}
+
+/* ── TYPOGRAPHY ──────────────────────────────────────────────────────────── */
+
+/* Eyebrow / before-heading — matches email design system */
+.before-heading {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: var(--ch-blue) !important;
+    margin-bottom: 8px;
+}
+
+/* Section heading dark color — near-black, premium agency feel */
+.heading-block h2,
+.heading-block h3 {
+    color: #0d0d0d;
+}
+
+/* Body / paragraph text standardisation */
+.t300 {
+    color: var(--ch-body);
+    line-height: 1.7;
+}
+
+p.font-body,
+.feature-box p,
+.testi-content p {
+    color: var(--ch-body);
+    line-height: 1.7;
+}
+
+/* ── SERVICES SECTION SURFACE ────────────────────────────────────────────── */
+
+/* Apply light surface background to the services section */
+#services-section {
+    background: var(--ch-surface);
+    border-top: 1px solid var(--ch-border);
+    border-bottom: 1px solid var(--ch-border);
+    padding: 70px 0;
+}
+
+/* ── PRODUCT CARD BADGES ─────────────────────────────────────────────────── */
+
+/* Unify badge background with design system dark navy */
+.products-badge-dark {
+    background: var(--ch-navy) !important;
+}
+
+/* ── TESTIMONIALS ────────────────────────────────────────────────────────── */
+
+.testimonial .testi-meta {
+    color: #0d0d0d;
+    font-weight: 700;
+}
+
+.testimonial .testi-meta span {
+    color: var(--ch-muted);
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────────────────── */
+
+#footer.dark {
+    background-color: #0d1220 !important;
+}
+
+#footer.dark h4 {
+    color: #ffffff;
+}
+
+#footer.dark address,
+#footer.dark p,
+#footer.dark abbr {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+#copyrights {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+    font-size: 13px;
+}
+
+#copyrights .copyright-links a {
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+
+#copyrights .copyright-links a:hover {
+    color: var(--ch-blue) !important;
+}
+
+/* ── PAGE TITLE (inner pages) ────────────────────────────────────────────── */
+
+section#page-title h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+section#page-title .page-title-muted {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7) !important;
+    letter-spacing: 0.3px;
+}
+
+/* ── NAV CTA BUTTON ──────────────────────────────────────────────────────────
+   White background when header is transparent (over blue hero).
+   Reverts to blue gradient when sticky (scrolled). */
+#header:not(.sticky-header) a.button.bgcolor {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: var(--ch-blue) !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+}
+
+#header:not(.sticky-header) a.button.bgcolor:hover {
+    background: var(--ch-surface) !important;
+    background-image: none !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* ── TEXT ROTATER ────────────────────────────────────────────────────────────
+   Non-hero rotaters (e.g. portfolio CTA on light background) → brand blue.
+   Hero rotater stays white (blue-on-blue would break). */
+:not(.slider-element) .text-rotater .t-rotate,
+:not(.slider-element) .text-rotater .t-rotate > span {
+    color: var(--ch-blue) !important;
+}
+
+.slider-element .text-rotater .t-rotate,
+.slider-element .text-rotater .t-rotate > span {
+    color: #ffffff !important;
+}
+
+/* ── PORTFOLIO CARD TEXT ─────────────────────────────────────────────────────
+   Small project-type label always white + stronger shadow for readability. */
+.img-hover-wrap .img-hover-detail small {
+    color: rgba(255, 255, 255, 0.90) !important;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }

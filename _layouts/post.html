@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<section id="page-title" class="page-title-parallax" style="background-image: url('/assets/images/background/page-header.jpg'); padding: 120px 0; background-size: contain;">
+  <div class="container clearfix">
+    <h1 data-animate="fadeInUp text-light" style="color: #f8f9fa">{{ page.title }}</h1>
+    <span data-animate="fadeInUp" data-delay="300" class="page-title-muted">
+      {{ page.date | date: "%B %-d, %Y" }}{% if page.category %} &middot; {{ page.category }}{% endif %}
+    </span>
+  </div>
+</section>
+
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <article class="post-content" style="font-size: 16px; line-height: 1.8;">
+            {{ content }}
+          </article>
+
+          <div class="line mt-5 mb-4"></div>
+
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <a href="/blog" class="btn btn-link color p-0">&#8592; Back to Blog</a>
+            </div>
+            <div class="col-md-6 text-md-right mt-3 mt-md-0">
+              <a href="https://portal.cyberhawksolutions.com/project-request/new" target="_blank"
+                class="button bgcolor text-white button-rounded button-sm ml-0">Start a Project</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
